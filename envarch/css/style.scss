@@ -1,0 +1,224 @@
+body{
+    margin: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style:none;
+    font-family: Oswald;
+}
+
+img{
+    max-width: 100%;
+    overflow: hidden;
+}
+
+button:focus {
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+        color: #37b38a !important;
+    }
+    &:focus{
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+@font-face{
+    font-family:Oswald ;
+    src: url(../fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
+
+header{
+    height: 110px;
+    width: 100%;
+    float: left;
+    .logo{
+        width: 40%;
+        float: left;
+        line-height: 110px;
+    }
+    .contact{
+        width: 50%;
+        float: left;
+        .address{
+            float: left;
+            width: 50%;
+            i{
+                float: left;
+                line-height: 110px;
+                font-size: 30px;
+                color: #ca9c6a;
+                margin-right: 15px;
+            }
+            .address-text{
+                float: left;
+                margin-top: 31px;
+                .title{
+                    width: 100%;
+                    float: left;
+                    color: #ca9c6a;
+                }
+            }
+        }
+        .phone{
+            float: left;
+            width: 50%;
+            i{
+                float: left;
+                line-height: 110px;
+                font-size: 30px;
+                color: #ca9c6a;
+                margin-right: 15px;
+            }
+            .address-text{
+                float: left;
+                margin-top: 31px;
+                .title{
+                    width: 100%;
+                    float: left;
+                    color: #ca9c6a;
+                }
+            }
+        }
+    }
+    .languages{
+        width: 10%;
+        float: left;
+        margin-top: 44px;
+        position: relative;
+        button{
+            border: none;
+            background: 0;
+            img{
+                width: 30px;
+                margin-right: 10px;
+            }
+        }
+        #demo{
+            margin-top: 20px;
+            .english{
+                width: 100%;
+                float: left;
+                margin-top: 10px;
+                color: black;
+                background: white;
+                width: 100px;
+                height: 40px;
+                line-height: 39px;
+                padding-left: 7px;
+                &:hover{
+                    color: black !important;
+                }
+                img{
+                    max-width: 30px;
+                    margin-right: 10px;
+                }
+            }
+        }
+        &:active i{
+            transform: rotate(180deg);
+            transition: 1s;
+        }
+    }
+}
+section{
+    header{
+        .menu{
+            height: 114px;
+            float: left;
+            width: 100%;
+            background: #1e1e1e;
+            border-left: 7px solid #ca9c6a;
+            .line{
+                float: left;
+            }
+            ul{
+                li{
+                    float: left;
+                    margin-left: 20px;
+                    a{
+                        color: white;
+                        text-transform: uppercase;
+                        font-size: 15px;
+                        width: 100px;
+                        height: 114px;
+                        float: left;
+                        line-height: 114px;
+                        text-align: center;
+                        &:hover{
+                            background: url(../images/hover.jpg);
+                            color: white !important;
+                        }
+                    }
+                    &:first-child{
+                        margin-left: 38px;
+                    }
+                }
+            }
+            .search-mail{
+                float: right;
+                .search{
+                    position: relative;
+                    button{
+                        color: white;
+                        font-size: 18px;
+                        line-height: 25px;
+                        margin-top: 30px;
+                        float: left;
+                        border: none;
+                        border-right: 2px solid white;
+                        padding-right: 14px;
+                        cursor: pointer;
+                        background: unset;
+                    }
+                    img{
+                        float: left;
+                        color: white;
+                        font-size: 16px;
+                        margin-top: 35px;
+                        margin-left: 20px;
+                        margin-right: 60px;
+                    }
+                    #search-bx{
+                        width: 320px;
+                        height: 78px;
+                        background: white;
+                        border: 1px solid #ccc;
+                        position: absolute;
+                        top: 104px;
+                        right: 0;
+                        z-index: 9999999999999;
+                        display: none;
+                        input{
+                            border: none;
+                            font-size: 17px;
+                            line-height: 76px;
+                            float: left;
+                            margin-left: 20px;
+                            border-right: 1px solid #ccc;
+                            padding-right: 90px;
+                            &:focus{
+                                outline: 0;
+                            }
+                        }
+                        button{
+                            float: left;
+                            color: #756d6d;
+                            margin-left: 16px;
+                            margin-top: 24px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
