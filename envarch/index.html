@@ -21,38 +21,38 @@ http://preview.themeforest.net/item/envarch-architecture-and-single-property-htm
     <body>
         <div id="wrap">
             <header>
-                <div class="container">
-                    <a href="" class="logo"><img src="images/logo.png" alt=""></a>
-                    <div class="contact">
-                        <div class="address">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <div class="address-text">
-                                <p class="title">Address:</p>
-                                <p>219 Bedford Street Birmingham, AL 35211</p>
+                <div id="nav">
+                    <div class="line-lg">
+                        <div class="container">
+                            <a href="" class="logo"><img src="images/logo.png" alt=""></a>
+                            <div class="contact">
+                                <div class="address">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <div class="address-text">
+                                        <p class="title">Address:</p>
+                                        <p>219 Bedford Street Birmingham, AL 35211</p>
+                                    </div>
+                                </div>
+                                <div class="phone">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <div class="address-text">
+                                        <p class="title">Call Anytime:</p>
+                                        <p>98 76543 210123 4567</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="phone">
-                            <i class="fa fa-phone" aria-hidden="true"></i>
-                            <div class="address-text">
-                                <p class="title">Call Anytime:</p>
-                                <p>98 76543 210123 4567</p>
+                            <div class="languages">
+                                    <button data-toggle="collapse" data-target="#demo">
+                                        <img src="images/icon-england.png" alt="">English <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                    </button>
+                                    <div id="demo" class="collapse">
+                                        <a href="" class="english"><img src="images/vn.jpg" alt="">VietNam</a>
+                                        <a href="" class="english"><img src="images/vn.jpg" alt="">VietNam</a>
+                                    </div>
+                                
                             </div>
                         </div>
                     </div>
-                    <div class="languages">
-                            <button data-toggle="collapse" data-target="#demo">
-                                <img src="images/icon-england.png" alt="">English <i class="fa fa-caret-down" aria-hidden="true"></i>
-                            </button>
-                            <div id="demo" class="collapse">
-                                <a href="" class="english"><img src="images/vn.jpg" alt="">VietNam</a>
-                                <a href="" class="english"><img src="images/vn.jpg" alt="">VietNam</a>
-                            </div>
-                        
-                    </div>
-                </div>
-            </header>
-            <section>
-                <header>
                     <div class="container">
                         <div class="menu">
                             <ul>
@@ -66,20 +66,22 @@ http://preview.themeforest.net/item/envarch-architecture-and-single-property-htm
                             <div class="search-mail">
                                 <div class="search">
                                     <button onclick="myFunction()"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                    <img src="images/bars.jpg" alt="">
                                     <form id="search-bx">
                                         <input type="text" placeholder="Search" class="searchbox" required="">
                                         <button type="submit" class="searchbutton fa fa-search"></button>
                                     </form>
                                 </div>
-                                
+                                <div class="appointment">
+                                    <button><img src="images/bars.jpg" alt=""></button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
-                </header>
+                </div>
+            </header>
+            <section>
                 <article>
-
+                    <img src="images/nha-thac.png" alt="">
                 </article>
                 <footer>
 
@@ -90,6 +92,7 @@ http://preview.themeforest.net/item/envarch-architecture-and-single-property-htm
             </footer>
         </div>
         <script>
+            // search ẩn hiện 
             function myFunction() {
               var x = document.getElementById("search-bx");
               if (x.style.display === "none") {
@@ -98,6 +101,19 @@ http://preview.themeforest.net/item/envarch-architecture-and-single-property-htm
                 x.style.display = "none";
               }
             }
-            </script>
+        </script>
+        <script>
+            // hide nav 
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("nav").style.top = "0";
+            } else {
+                document.getElementById("nav").style.top = "-110px";
+            }
+            prevScrollpos = currentScrollPos;
+            }
+        </script>
     </body>
 </html>

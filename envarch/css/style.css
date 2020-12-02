@@ -42,50 +42,41 @@ a:focus {
 header {
   height: 110px;
   width: 100%;
-  float: left;
+  display: block;
 }
 
-header .logo {
+header #nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: block;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header #nav .line-lg {
+  width: 100%;
+  float: left;
+  background: white;
+}
+
+header #nav .line-lg .logo {
+  float: left;
   width: 40%;
-  float: left;
   line-height: 110px;
 }
 
-header .contact {
+header #nav .line-lg .contact {
   width: 50%;
   float: left;
 }
 
-header .contact .address {
+header #nav .line-lg .contact .address {
   float: left;
   width: 50%;
 }
 
-header .contact .address i {
-  float: left;
-  line-height: 110px;
-  font-size: 30px;
-  color: #ca9c6a;
-  margin-right: 15px;
-}
-
-header .contact .address .address-text {
-  float: left;
-  margin-top: 31px;
-}
-
-header .contact .address .address-text .title {
-  width: 100%;
-  float: left;
-  color: #ca9c6a;
-}
-
-header .contact .phone {
-  float: left;
-  width: 50%;
-}
-
-header .contact .phone i {
+header #nav .line-lg .contact .address i {
   float: left;
   line-height: 110px;
   font-size: 30px;
@@ -93,39 +84,63 @@ header .contact .phone i {
   margin-right: 15px;
 }
 
-header .contact .phone .address-text {
+header #nav .line-lg .contact .address .address-text {
+  margin-top: 30px;
   float: left;
-  margin-top: 31px;
 }
 
-header .contact .phone .address-text .title {
+header #nav .line-lg .contact .address .address-text .title {
   width: 100%;
   float: left;
   color: #ca9c6a;
 }
 
-header .languages {
+header #nav .line-lg .contact .phone {
+  float: left;
+  width: 50%;
+}
+
+header #nav .line-lg .contact .phone i {
+  float: left;
+  line-height: 110px;
+  font-size: 30px;
+  color: #ca9c6a;
+  margin-right: 15px;
+}
+
+header #nav .line-lg .contact .phone .address-text {
+  float: left;
+  margin-top: 31px;
+}
+
+header #nav .line-lg .contact .phone .address-text .title {
+  width: 100%;
+  float: left;
+  color: #ca9c6a;
+}
+
+header #nav .line-lg .languages {
   width: 10%;
   float: left;
   margin-top: 44px;
   position: relative;
 }
 
-header .languages button {
+header #nav .line-lg .languages button {
   border: none;
   background: 0;
 }
 
-header .languages button img {
+header #nav .line-lg .languages button img {
   width: 30px;
   margin-right: 10px;
 }
 
-header .languages #demo {
+header #nav .line-lg .languages #demo {
   margin-top: 20px;
 }
 
-header .languages #demo .english {
+header #nav .line-lg .languages #demo .english {
   width: 100%;
   float: left;
   margin-top: 10px;
@@ -137,23 +152,23 @@ header .languages #demo .english {
   padding-left: 7px;
 }
 
-header .languages #demo .english:hover {
+header #nav .line-lg .languages #demo .english:hover {
   color: black !important;
 }
 
-header .languages #demo .english img {
+header #nav .line-lg .languages #demo .english img {
   max-width: 30px;
   margin-right: 10px;
 }
 
-header .languages:active i {
+header #nav .line-lg .languages:active i {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-section header .menu {
+header #nav .menu {
   height: 114px;
   float: left;
   width: 100%;
@@ -161,16 +176,16 @@ section header .menu {
   border-left: 7px solid #ca9c6a;
 }
 
-section header .menu .line {
+header #nav .menu .line {
   float: left;
 }
 
-section header .menu ul li {
+header #nav .menu ul li {
   float: left;
   margin-left: 20px;
 }
 
-section header .menu ul li a {
+header #nav .menu ul li a {
   color: white;
   text-transform: uppercase;
   font-size: 15px;
@@ -181,24 +196,26 @@ section header .menu ul li a {
   text-align: center;
 }
 
-section header .menu ul li a:hover {
+header #nav .menu ul li a:hover {
   background: url(../images/hover.jpg);
   color: white !important;
 }
 
-section header .menu ul li:first-child {
+header #nav .menu ul li:first-child {
   margin-left: 38px;
 }
 
-section header .menu .search-mail {
+header #nav .menu .search-mail {
   float: right;
+  margin-top: 5px;
 }
 
-section header .menu .search-mail .search {
+header #nav .menu .search-mail .search {
   position: relative;
+  margin-right: 100px;
 }
 
-section header .menu .search-mail .search button {
+header #nav .menu .search-mail .search button {
   color: white;
   font-size: 18px;
   line-height: 25px;
@@ -211,16 +228,16 @@ section header .menu .search-mail .search button {
   background: unset;
 }
 
-section header .menu .search-mail .search img {
+header #nav .menu .search-mail .search img {
   float: left;
   color: white;
   font-size: 16px;
-  margin-top: 35px;
+  margin-top: 5px;
   margin-left: 20px;
   margin-right: 60px;
 }
 
-section header .menu .search-mail .search #search-bx {
+header #nav .menu .search-mail .search #search-bx {
   width: 320px;
   height: 78px;
   background: white;
@@ -232,7 +249,7 @@ section header .menu .search-mail .search #search-bx {
   display: none;
 }
 
-section header .menu .search-mail .search #search-bx input {
+header #nav .menu .search-mail .search #search-bx input {
   border: none;
   font-size: 17px;
   line-height: 76px;
@@ -242,14 +259,26 @@ section header .menu .search-mail .search #search-bx input {
   padding-right: 90px;
 }
 
-section header .menu .search-mail .search #search-bx input:focus {
+header #nav .menu .search-mail .search #search-bx input:focus {
   outline: 0;
 }
 
-section header .menu .search-mail .search #search-bx button {
+header #nav .menu .search-mail .search #search-bx button {
   float: left;
   color: #756d6d;
   margin-left: 16px;
   margin-top: 24px;
+}
+
+header #nav .menu .search-mail .appointment {
+  float: left;
+  margin-left: 15px;
+  margin-top: 30px;
+}
+
+header #nav .menu .search-mail .appointment button {
+  border: 0;
+  font-size: 10px;
+  line-height: unset;
 }
 /*# sourceMappingURL=style.css.map */

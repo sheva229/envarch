@@ -39,98 +39,106 @@ a{
 header{
     height: 110px;
     width: 100%;
-    float: left;
-    .logo{
-        width: 40%;
-        float: left;
-        line-height: 110px;
-    }
-    .contact{
-        width: 50%;
-        float: left;
-        .address{
+    display: block;
+    #nav{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        display: block;
+        transition: 1s;
+        .line-lg{
+            width: 100%;
             float: left;
-            width: 50%;
-            i{
+            background: white;
+            .logo{
                 float: left;
+                width: 40%;
                 line-height: 110px;
-                font-size: 30px;
-                color: #ca9c6a;
-                margin-right: 15px;
             }
-            .address-text{
+            .contact{
+                width: 50%;
                 float: left;
-                margin-top: 31px;
-                .title{
-                    width: 100%;
+                .address{
                     float: left;
-                    color: #ca9c6a;
+                    width: 50%;
+                    i{
+                        float: left;
+                        line-height: 110px;
+                        font-size: 30px;
+                        color: #ca9c6a;
+                        margin-right: 15px;
+                    }
+                    .address-text{
+                        margin-top: 30px;
+                        float: left;
+                        .title{
+                            width: 100%;
+                            float: left;
+                            color: #ca9c6a;
+                        }
+                    }
                 }
-            }
-        }
-        .phone{
-            float: left;
-            width: 50%;
-            i{
-                float: left;
-                line-height: 110px;
-                font-size: 30px;
-                color: #ca9c6a;
-                margin-right: 15px;
-            }
-            .address-text{
-                float: left;
-                margin-top: 31px;
-                .title{
-                    width: 100%;
+                .phone{
                     float: left;
-                    color: #ca9c6a;
+                    width: 50%;
+                    i{
+                        float: left;
+                        line-height: 110px;
+                        font-size: 30px;
+                        color: #ca9c6a;
+                        margin-right: 15px;
+                    }
+                    .address-text{
+                        float: left;
+                        margin-top: 31px;
+                        .title{
+                            width: 100%;
+                            float: left;
+                            color: #ca9c6a;
+                        }
+                    }
                 }
             }
-        }
-    }
-    .languages{
-        width: 10%;
-        float: left;
-        margin-top: 44px;
-        position: relative;
-        button{
-            border: none;
-            background: 0;
-            img{
-                width: 30px;
-                margin-right: 10px;
-            }
-        }
-        #demo{
-            margin-top: 20px;
-            .english{
-                width: 100%;
+            .languages{
+                width: 10%;
                 float: left;
-                margin-top: 10px;
-                color: black;
-                background: white;
-                width: 100px;
-                height: 40px;
-                line-height: 39px;
-                padding-left: 7px;
-                &:hover{
-                    color: black !important;
+                margin-top: 44px;
+                position: relative;
+                button{
+                    border: none;
+                    background: 0;
+                    img{
+                        width: 30px;
+                        margin-right: 10px;
+                    }
                 }
-                img{
-                    max-width: 30px;
-                    margin-right: 10px;
+                #demo{
+                    margin-top: 20px;
+                    .english{
+                        width: 100%;
+                        float: left;
+                        margin-top: 10px;
+                        color: black;
+                        background: white;
+                        width: 100px;
+                        height: 40px;
+                        line-height: 39px;
+                        padding-left: 7px;
+                        &:hover{
+                            color: black !important;
+                        }
+                        img{
+                            max-width: 30px;
+                            margin-right: 10px;
+                        }
+                    }
                 }
-            }
+                &:active i{
+                    transform: rotate(180deg);
+                    transition: 1s;
+                }
+            } 
         }
-        &:active i{
-            transform: rotate(180deg);
-            transition: 1s;
-        }
-    }
-}
-section{
-    header{
         .menu{
             height: 114px;
             float: left;
@@ -165,8 +173,10 @@ section{
             }
             .search-mail{
                 float: right;
+                margin-top: 5px;
                 .search{
                     position: relative;
+                    margin-right: 100px;
                     button{
                         color: white;
                         font-size: 18px;
@@ -183,7 +193,7 @@ section{
                         float: left;
                         color: white;
                         font-size: 16px;
-                        margin-top: 35px;
+                        margin-top: 5px;
                         margin-left: 20px;
                         margin-right: 60px;
                     }
@@ -217,8 +227,22 @@ section{
                         }
                     }
                 }
-                
+                .appointment{
+                    float: left;
+                    margin-left: 15px;
+                    margin-top: 30px;
+                    button{
+                        border: 0;
+                        font-size: 10px;
+                        line-height: unset;
+                    }
+                }
             }
         }
+    } 
+}
+section{
+    header{
+        
     }
 }
